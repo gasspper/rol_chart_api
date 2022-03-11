@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+RolGame.create([{ name: "D&D", category: "Tabletop" }, { name: "Kult Divinity Lost", category: "Terror" }])

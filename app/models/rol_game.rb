@@ -1,0 +1,2 @@
+class RolGame < ApplicationRecord
+end

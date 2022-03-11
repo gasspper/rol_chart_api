@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :rol_games, only:[:index]
       resources :archetypes, only:[:index]
+      resources :spells, only:[:index]
     end
   end
   # Defines the root path route ("/")

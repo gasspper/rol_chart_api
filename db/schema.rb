@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_11_153028) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_11_160801) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -30,5 +30,19 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_11_153028) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "spells", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.bigint "archetype_id", null: false
+    t.string "level"
+    t.string "casting_time"
+    t.string "duration"
+    t.text "effect"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["archetype_id"], name: "index_spells_on_archetype_id"
+  end
+
   add_foreign_key "archetypes", "rol_games"
+  add_foreign_key "spells", "archetypes"
 end
